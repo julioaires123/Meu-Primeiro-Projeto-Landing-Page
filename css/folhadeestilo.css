@@ -417,10 +417,10 @@ footer .last {
         display: none;
     }
     .header-block img {
-        width: 70%;
+        width: 79%;
         position: absolute;
         right: 16%;
-        top: 30%;
+        top: 10%;
     }
     .header-block .text {
         position: absolute;
@@ -428,7 +428,7 @@ footer .last {
         left: 15;
     }
     section .filter-card {
-        width: 390px;
+        width: 430px;
         padding: 0px 10px;
     }
     .search-input {
