@@ -10,7 +10,10 @@
     font-family: "Roboto", sans-serif;
      margin-left: 0;
      margin-rigth: 0;
-}
+}  
+body {
+        overflow-x: hidden;
+    }
  
 
  :root {
