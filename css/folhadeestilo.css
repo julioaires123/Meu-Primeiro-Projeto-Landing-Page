@@ -429,7 +429,6 @@ footer .last {
     }
     .nav-list {
         position: absolute;
-        top: 8vh;
         right: 0;
         width: 100vw;
         height: 92vh;
@@ -603,6 +602,9 @@ footer .last {
     .nav-list {
         position: absolute;
         top: 11vh;
+    }
+    .brand {
+        font-size: 40px;
     }
     .header-block img {
         width: 55%;
