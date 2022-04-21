@@ -442,7 +442,7 @@ footer .last {
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        transform: translateX(100%);
+        transform: translateX(0%);
         transition: transform 0.3s ease-in;
         z-index: 50;
         ;
