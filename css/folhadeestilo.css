@@ -428,7 +428,7 @@ footer .last {
 
 @media(max-width: 999px) {
     nav ul li {
-        display: flex;
+        display: block;
     }
     body {
         overflow-x: hidden;
