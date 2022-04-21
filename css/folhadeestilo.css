@@ -603,6 +603,9 @@ footer .last {
         position: absolute;
         top: 11vh;
     }
+    body {
+        overflow-x: hidden;
+    }
     .brand {
         font-size: 40px;
     }
@@ -619,6 +622,9 @@ footer .last {
     .nav-list {
         position: absolute;
         top: 11vh;
+    }
+    body {
+        overflow-x: hidden;
     }
     .brand {
         font-size: 40px;
@@ -637,6 +643,9 @@ footer .last {
         position: absolute;
         top: 11vh;
     }
+    body {
+        overflow-x: hidden;
+    }
     .header-block img {
         width: 55%;
         position: absolute;
@@ -650,6 +659,9 @@ footer .last {
     .nav-list {
         position: absolute;
         top: 11vh;
+    }
+    body {
+        overflow-x: hidden;
     }
     .header-block img {
         width: 65%;
@@ -665,6 +677,9 @@ footer .last {
         position: absolute;
         top: 11vh;
     }
+    body {
+        overflow-x: hidden;
+    }
     .header-block img {
         width: 75%;
         position: absolute;
@@ -678,6 +693,9 @@ footer .last {
     .nav-list {
         position: absolute;
         top: 11vh;
+    }
+    body {
+        overflow-x: hidden;
     }
     .header-block img {
         width: 85%;
@@ -693,6 +711,9 @@ footer .last {
         position: absolute;
         top: 11vh;
     }
+    body {
+        overflow-x: hidden;
+    }
     .header-block img {
         width: 95%;
         position: absolute;
@@ -707,6 +728,9 @@ footer .last {
         position: absolute;
         top: 11vh;
     }
+    body {
+        overflow-x: hidden;
+    }
     .header-block img {
         width: 95%;
         position: absolute;
@@ -720,6 +744,9 @@ footer .last {
     .nav-list {
         position: absolute;
         top: 11vh;
+    }
+    body {
+        overflow-x: hidden;
     }
     .header-block img {
         width: 95%;
