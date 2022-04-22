@@ -439,8 +439,8 @@ footer .last {
     }
     .nav-list {
         position: absolute;
-        right: 0;
-        width: 100vw;
+        width: 100%;
+        right: 0px;
         top: 60px;
         height: calc(100vh - 60px);
         background: var(--orange);
