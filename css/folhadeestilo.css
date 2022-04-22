@@ -441,8 +441,8 @@ footer .last {
         position: absolute;
         width: 100%;
         right: 0px;
-        top: 60px;
-        height: calc(100vh - 60px);
+        top: 55px;
+        height: calc(100vh - 55px);
         background: var(--orange);
         flex-direction: column;
         align-items: center;
@@ -450,6 +450,7 @@ footer .last {
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
         z-index: 50000;
+        transition: 0.9s;
     }
     .mobile-menu {
         display: none;
