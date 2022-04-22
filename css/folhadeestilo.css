@@ -428,16 +428,16 @@ footer .last {
 /* Responsividade */
 
 @media(max-width: 999px) {
-      }
-    body {
+ body {
         overflow-x: hidden;
+      margin-left: 0;
+     margin-rigth: 0;
     }
+ 
     nav ul li {
         display: block;
     }
-    body {
-        overflow-x: hidden;
-    }
+
     .nav-list {
         position: absolute;
         right: 0;
@@ -610,9 +610,12 @@ footer .last {
 }
 
 @media (max-width: 999px) {
-        body {
+body {
         overflow-x: hidden;
+      margin-left: 0;
+     margin-rigth: 0;
     }
+ 
     .nav-list {
         position: absolute;
         top: 11vh;
@@ -631,9 +634,12 @@ footer .last {
 }
 
 @media (max-width: 768px) {
-       body {
+body {
         overflow-x: hidden;
+      margin-left: 0;
+     margin-rigth: 0;
     }
+ 
     .nav-list {
         position: absolute;
         top: 11vh;
@@ -652,9 +658,12 @@ footer .last {
 }
 
 @media (max-width: 650px) {
-      body {
+  body {
         overflow-x: hidden;
+      margin-left: 0;
+     margin-rigth: 0;
     }
+ 
     .nav-list {
         position: absolute;
         top: 11vh;
@@ -670,9 +679,12 @@ footer .last {
 }
 
 @media (max-width: 570px) {
-     body {
+  body {
         overflow-x: hidden;
+      margin-left: 0;
+     margin-rigth: 0;
     }
+ 
     .nav-list {
         position: absolute;
         top: 11vh;
@@ -688,9 +700,12 @@ footer .last {
 }
 
 @media (max-width: 500px) {
-       body {
+body {
         overflow-x: hidden;
+      margin-left: 0;
+     margin-rigth: 0;
     }
+ 
        .nav-list {
         position: absolute;
         top: 11vh;
@@ -706,9 +721,12 @@ footer .last {
 }
 
 @media (max-width: 450px) {
-      body {
+body {
         overflow-x: hidden;
+      margin-left: 0;
+     margin-rigth: 0;
     }
+ 
     .nav-list {
         position: absolute;
         top: 11vh;
@@ -724,9 +742,12 @@ footer .last {
 }
 
 @media (max-width: 370px) {
-      body {
+  body {
         overflow-x: hidden;
+      margin-left: 0;
+     margin-rigth: 0;
     }
+ 
     .nav-list {
         position: absolute;
         top: 11vh;
@@ -742,9 +763,12 @@ footer .last {
 }
 
 @media (max-width: 320px) {
-       body {
+body {
         overflow-x: hidden;
+      margin-left: 0;
+     margin-rigth: 0;
     }
+ 
     .nav-list {
         position: absolute;
         top: 11vh;
@@ -760,9 +784,12 @@ footer .last {
 }
 
 @media (max-width: 300px) {
-       body {
+  body {
         overflow-x: hidden;
+      margin-left: 0;
+     margin-rigth: 0;
     }
+ 
         .nav-list {
         position: absolute;
         top: 11vh;
