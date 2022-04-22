@@ -452,7 +452,7 @@ footer .last {
         z-index: 50000;
     }
     .mobile-menu {
-        display: none;
+        display: flex;
         cursor: pointer;
     }
     .mobile-menu div {
