@@ -76,7 +76,7 @@ nav ul li a:hover {
 nav ul button {
     border: 1px solid var(--blue);
     background: transparent;
-    padding: 8px 40px;
+    padding: 80px 40px;
     cursor: pointer;
     margin-left: 30px;
     color: var(--blue);
@@ -214,7 +214,7 @@ section .card-item {
 }
 
 .card-item img {
-    width: 85%;
+    width: 100%;
 }
 
 .card-item h4 {
@@ -228,7 +228,7 @@ section .card-item {
 }
 
 .card-item button {
-    width: 90%;
+    width: 200px;
     padding: 15px 0px;
     border: none;
     background: var(--blue);
@@ -452,7 +452,7 @@ footer .last {
         z-index: 50000;
     }
     .mobile-menu {
-        display: flex;
+        display: block;
         cursor: pointer;
     }
     .mobile-menu div {
@@ -521,6 +521,9 @@ footer .last {
     .title-wrapper-catalog {
         margin-top: 45px;
         padding-bottom: 20px;
+    }
+    .card-wrapper-h3 {
+        margin-top: 30px;
     }
     nav {
         width: 100%;
