@@ -427,6 +427,10 @@ footer .last {
 /* Responsividade */
 
 @media(max-width: 999px) {
+      }
+    body {
+        overflow-x: hidden;
+    }
     nav ul li {
         display: block;
     }
@@ -442,7 +446,7 @@ footer .last {
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        transform: translateX(50%);
+        transform: translateX(100%);
         transition: transform 0.3s ease-in;
         z-index: 50;
         ;
@@ -605,13 +609,14 @@ footer .last {
 }
 
 @media (max-width: 999px) {
+        body {
+        overflow-x: hidden;
+    }
     .nav-list {
         position: absolute;
         top: 11vh;
     }
-    body {
-        overflow-x: hidden;
-    }
+
     .brand {
         font-size: 40px;
     }
@@ -625,13 +630,14 @@ footer .last {
 }
 
 @media (max-width: 768px) {
+       body {
+        overflow-x: hidden;
+    }
     .nav-list {
         position: absolute;
         top: 11vh;
     }
-    body {
-        overflow-x: hidden;
-    }
+ 
     .brand {
         font-size: 40px;
     }
@@ -645,13 +651,14 @@ footer .last {
 }
 
 @media (max-width: 650px) {
+      body {
+        overflow-x: hidden;
+    }
     .nav-list {
         position: absolute;
         top: 11vh;
     }
-    body {
-        overflow-x: hidden;
-    }
+  
     .header-block img {
         width: 55%;
         position: absolute;
@@ -662,13 +669,14 @@ footer .last {
 }
 
 @media (max-width: 570px) {
+     body {
+        overflow-x: hidden;
+    }
     .nav-list {
         position: absolute;
         top: 11vh;
     }
-    body {
-        overflow-x: hidden;
-    }
+   
     .header-block img {
         width: 65%;
         position: absolute;
@@ -679,13 +687,14 @@ footer .last {
 }
 
 @media (max-width: 500px) {
-    .nav-list {
+       body {
+        overflow-x: hidden;
+    }
+       .nav-list {
         position: absolute;
         top: 11vh;
     }
-    body {
-        overflow-x: hidden;
-    }
+
     .header-block img {
         width: 75%;
         position: absolute;
@@ -696,13 +705,14 @@ footer .last {
 }
 
 @media (max-width: 450px) {
+      body {
+        overflow-x: hidden;
+    }
     .nav-list {
         position: absolute;
         top: 11vh;
     }
-    body {
-        overflow-x: hidden;
-    }
+  
     .header-block img {
         width: 85%;
         position: absolute;
@@ -713,13 +723,14 @@ footer .last {
 }
 
 @media (max-width: 370px) {
+      body {
+        overflow-x: hidden;
+    }
     .nav-list {
         position: absolute;
         top: 11vh;
     }
-    body {
-        overflow-x: hidden;
-    }
+  
     .header-block img {
         width: 95%;
         position: absolute;
@@ -730,13 +741,14 @@ footer .last {
 }
 
 @media (max-width: 320px) {
+       body {
+        overflow-x: hidden;
+    }
     .nav-list {
         position: absolute;
         top: 11vh;
     }
-    body {
-        overflow-x: hidden;
-    }
+ 
     .header-block img {
         width: 95%;
         position: absolute;
@@ -747,13 +759,14 @@ footer .last {
 }
 
 @media (max-width: 300px) {
-    .nav-list {
+       body {
+        overflow-x: hidden;
+    }
+        .nav-list {
         position: absolute;
         top: 11vh;
     }
-    body {
-        overflow-x: hidden;
-    }
+ 
     .header-block img {
         width: 95%;
         position: absolute;
