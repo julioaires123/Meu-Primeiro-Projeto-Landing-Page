@@ -441,8 +441,8 @@ footer .last {
         position: absolute;
         right: 0;
         width: 100vw;
-        height: 92vh;
-        top: 16vh;
+        top: 60px;
+        height: calc(100vh - 60px);
         background: var(--orange);
         flex-direction: column;
         align-items: center;
