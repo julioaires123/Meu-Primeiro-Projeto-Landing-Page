@@ -10,11 +10,11 @@ body {
     align-items: center;
     height: 100vh;
     overflow: hidden;
-    background-color: transparent;
+    background-color: black;
 }
 
 #relogio {
     font-size: 23rem;
-    color: beige;
+    color: transparent;
     font-family: 'montserrat';
 }
