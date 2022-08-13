@@ -17,7 +17,7 @@ body {
 
 #relogio {
     font-size: 23rem;
-    color: #FF9500;
+    color: #0044ff;
     font-family: 'montserrat';
 }
 
@@ -27,7 +27,7 @@ h1 {
     right: 32%;
     justify-content: space-around;
     font-size: 3rem;
-    color: #FF9500;
+    color: #0044ff;
     font-family: 'montserrat';
 }
 
@@ -39,7 +39,7 @@ h1 {
     top: 80%;
     right: 70%;
     font-size: 6rem;
-    color: #FF9500;
+    color: #0044ff;
     font-family: 'montserrat';
 }
 
@@ -49,7 +49,7 @@ p.fn {
     right: 71%;
     justify-content: space-around;
     font-size: 1.6rem;
-    color: #FF9500;
+    color: #0044ff;
     font-family: 'montserrat';
 }
 
@@ -62,7 +62,7 @@ p.fn {
     right: 35%;
     justify-content: space-around;
     font-size: 6rem;
-    color: #FF9500;
+    color: #0044ff;
     font-family: 'montserrat';
 }
 
@@ -72,7 +72,7 @@ p.am {
     right: 42%;
     justify-content: space-around;
     font-size: 1.6rem;
-    color: #FF9500;
+    color: #0044ff;
     font-family: 'montserrat';
 }
 
@@ -84,7 +84,7 @@ p.am {
     top: 80%;
     right: 4%;
     font-size: 6rem;
-    color: #FF9500;
+    color: #0044ff;
     font-family: 'montserrat';
 }
 
@@ -94,7 +94,7 @@ p.ac {
     right: 15%;
     justify-content: space-around;
     font-size: 1.6rem;
-    color: #FF9500;
+    color: #0044ff;
     font-family: 'montserrat';
 }
 
@@ -105,6 +105,6 @@ section {
     font-size: 4.6rem;
     text-align: center;
     margin: -20px;
-    color: #FF9500;
+    color: #0044ff;
     font-family: 'montserrat';
 }
