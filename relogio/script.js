@@ -22,20 +22,21 @@ setInterval(function relog() {
 
 }, 1000)
 
+
+
 let rel = document.getElementById('dia')
-let dt = new Date();
+let dt = new Date()
 let diasem = dt.getDay();
-let dia = dt.getDate();
-let mes = dt.getMonth();
+let dia = dt.getDate()
+let mes = dt.getMonth()
 let ano = dt.getFullYear()
 
 
-let meses = new Array("Dezembro", "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Julho", "Agosto", "Setembro", "Outubro", "Novembro");
-let semanas = new Array("Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado");
+
+let meses = new Array("Dezembro", "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Julho", "Agosto", "Setembro", "Outubro", "Novembro")
+let semanas = new Array("Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado")
 
 document.write(semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano);
-
-
 
 
 
