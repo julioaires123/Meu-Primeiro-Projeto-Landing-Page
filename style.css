@@ -1,1 +1,110 @@
-# Meu-Primeiro-Projeto-Landing-Page
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*horário de Brasília principal*/
+
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+}
+
+#relogio {
+    font-size: 23rem;
+    color: #FF9500;
+    font-family: 'montserrat';
+}
+
+h1 {
+    position: fixed;
+    top: 1%;
+    right: 32%;
+    justify-content: space-around;
+    font-size: 3rem;
+    color: #FF9500;
+    font-family: 'montserrat';
+}
+
+
+/*horário do fernando de noronha*/
+
+#relogio2 {
+    position: fixed;
+    top: 80%;
+    right: 70%;
+    font-size: 6rem;
+    color: #FF9500;
+    font-family: 'montserrat';
+}
+
+p.fn {
+    position: fixed;
+    top: 78%;
+    right: 71%;
+    justify-content: space-around;
+    font-size: 1.6rem;
+    color: #FF9500;
+    font-family: 'montserrat';
+}
+
+
+/*horário do amazonas*/
+
+#relogio3 {
+    position: fixed;
+    top: 80%;
+    right: 35%;
+    justify-content: space-around;
+    font-size: 6rem;
+    color: #FF9500;
+    font-family: 'montserrat';
+}
+
+p.am {
+    position: fixed;
+    top: 78%;
+    right: 42%;
+    justify-content: space-around;
+    font-size: 1.6rem;
+    color: #FF9500;
+    font-family: 'montserrat';
+}
+
+
+/*horário do acre*/
+
+#relogio4 {
+    position: fixed;
+    top: 80%;
+    right: 4%;
+    font-size: 6rem;
+    color: #FF9500;
+    font-family: 'montserrat';
+}
+
+p.ac {
+    position: fixed;
+    top: 78%;
+    right: 15%;
+    justify-content: space-around;
+    font-size: 1.6rem;
+    color: #FF9500;
+    font-family: 'montserrat';
+}
+
+
+/*ok teste dia mes e ano*/
+
+section {
+    font-size: 4.6rem;
+    text-align: center;
+    margin: -20px;
+    color: #FF9500;
+    font-family: 'montserrat';
+}
