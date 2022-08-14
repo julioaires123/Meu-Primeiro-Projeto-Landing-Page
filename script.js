@@ -3,7 +3,7 @@ setInterval(function relog() {
     let data = new Date()
     let h = data.getHours()
     let m = data.getMinutes() + 1
-    let s = data.getSeconds() - 28
+    let s = data.getSeconds() 
 
     if (h < 10) {
         h = `0${h}`
@@ -45,8 +45,8 @@ setInterval(function relog2() {
     let rel = document.getElementById('relogio2')
     let data = new Date()
     let h = data.getHours() + 1
-    let m = data.getMinutes() + 1
-    let s = data.getSeconds() - 28
+    let m = data.getMinutes() 
+    let s = data.getSeconds() 
 
     if (h < 10) {
         h = `0${h}`
@@ -67,8 +67,8 @@ setInterval(function relog3() {
     let rel = document.getElementById('relogio3')
     let data = new Date()
     let h = data.getHours() - 1
-    let m = data.getMinutes() + 1
-    let s = data.getSeconds() - 28
+    let m = data.getMinutes() 
+    let s = data.getSeconds() 
 
     if (h < 10) {
         h = `0${h}`
@@ -89,8 +89,8 @@ setInterval(function relog4() {
     let rel = document.getElementById('relogio4')
     let data = new Date()
     let h = data.getHours() - 2
-    let m = data.getMinutes() + 1
-    let s = data.getSeconds() - 28
+    let m = data.getMinutes() 
+    let s = data.getSeconds() 
 
     if (h < 10) {
         h = `0${h}`
