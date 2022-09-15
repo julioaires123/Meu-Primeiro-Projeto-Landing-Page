@@ -43,10 +43,14 @@ document.write(semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano
 
 setInterval(function relog2() {
     let rel = document.getElementById('relogio2')
-    let data = new Date()
-    let h = data.getHours() + 1
-    let m = data.getMinutes() 
-    let s = data.getSeconds() 
+    let data = new Date();
+    let h = data.getHours() + 1;
+    let m = data.getMinutes(); 
+    let s = data.getSeconds(); 
+    
+        if (h > 24) {
+        h = h - 24;
+    }
 
     if (h < 10) {
         h = `0${h}`
