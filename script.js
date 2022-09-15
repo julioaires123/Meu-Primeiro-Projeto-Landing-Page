@@ -5,6 +5,8 @@ setInterval(function relog() {
     let m = data.getMinutes();
     let s = data.getSeconds() + 30;
 
+
+
     if (s > 59) {
 
         m = m + 1;
@@ -162,19 +164,22 @@ setInterval(function relog() {
 
 
 
-let rel = document.getElementById('relogio')
 let dt = new Date();
-let diasem = dt.getDay();
-let dia = dt.getDate();
-let mes = dt.getMonth();
-let ano = dt.getFullYear();
+let ndt = new Date();
+ndt.setDate(dt.getDate() + 0);
+let diasem = ndt.getDay();
+let dia = ndt.getDate();
+let mes = ndt.getMonth();
+let ano = ndt.getFullYear();
 
 
 
 let meses = new Array("Dezembro", "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Julho", "Agosto", "Setembro", "Outubro", "Novembro")
 let semanas = new Array("Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado")
 
+
 document.write(semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano);
+
 
 
 
