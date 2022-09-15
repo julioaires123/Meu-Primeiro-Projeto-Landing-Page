@@ -48,7 +48,7 @@ setInterval(function relog2() {
     let m = data.getMinutes(); 
     let s = data.getSeconds(); 
     
-        if (h > 24) {
+    if (h > 24) {
         h = h - 24;
     }
 
