@@ -32,7 +32,7 @@ setInterval(function relog() {
     if (s === 60) {
 
         s = 00;
-    }-
+    }
     if (s === 61) {
 
         s = 01;
@@ -780,7 +780,6 @@ setInterval(function relog4() {
     if (s < 10) {
         s = `0${s}`
     }
-    
 
     rel.innerHTML = `${h}:${m}:${s}`
 }, 1000)
