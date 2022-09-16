@@ -781,9 +781,6 @@ setInterval(function relog4() {
         s = `0${s}`
     }
     
-      if (s < 10) {
-        s = `0${s}`
-    }
 
     rel.innerHTML = `${h}:${m}:${s}`
 }, 1000)
