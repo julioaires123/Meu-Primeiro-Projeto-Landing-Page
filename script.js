@@ -32,7 +32,7 @@ setInterval(function relog() {
     if (s === 60) {
 
         s = 00;
-    }
+    }-
     if (s === 61) {
 
         s = 01;
