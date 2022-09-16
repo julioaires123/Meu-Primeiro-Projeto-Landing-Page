@@ -7,6 +7,7 @@ setInterval(function relog() {
     let m = data.getMinutes();
     let s = data.getSeconds() + 30;
 
+
     if (m > 59) {
 
         h = h + 1;
@@ -16,6 +17,12 @@ setInterval(function relog() {
 
         m = m + 1;
     }
+
+    if (m > 59) {
+
+        h = h + 1;
+    }
+
     if (m === 60) {
 
         m = 00;
@@ -205,6 +212,10 @@ setInterval(function relog2() {
 
         m = m + 1;
     }
+    if (m > 59) {
+
+        h = h + 1;
+    }
 
     if (h === 24) {
 
@@ -390,6 +401,10 @@ setInterval(function relog3() {
         m = m + 1;
     }
 
+    if (m > 59) {
+
+        h = h + 1;
+    }
 
     if (m === 60) {
 
@@ -583,6 +598,16 @@ setInterval(function relog4() {
     if (s > 59) {
 
         m = m + 1;
+    }
+
+    if (m > 59) {
+
+        h = h + 1;
+    }
+
+    if (m > 59) {
+
+        h = h + 1;
     }
 
     if (m === 60) {
