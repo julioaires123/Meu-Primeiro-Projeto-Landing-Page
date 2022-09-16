@@ -1,3 +1,5 @@
+//horário de Brasília
+
 setInterval(function relog() {
     let rel = document.getElementById('relogio')
     let data = new Date();
@@ -5,7 +7,10 @@ setInterval(function relog() {
     let m = data.getMinutes();
     let s = data.getSeconds() + 30;
 
+    if (m > 59) {
 
+        h = h + 1;
+    }
 
     if (s > 59) {
 
@@ -162,7 +167,7 @@ setInterval(function relog() {
 
 }, 1000)
 
-
+//Dia mês e ano ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 let dt = new Date();
 let ndt = new Date();
@@ -182,7 +187,7 @@ document.write(semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano
 
 
 
-
+//horário de Fernando de Noronha////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 setInterval(function relog2() {
     let rel = document.getElementById('relogio2')
@@ -191,9 +196,24 @@ setInterval(function relog2() {
     let m = data.getMinutes();
     let s = data.getSeconds() + 30;
 
-    if (h === 25) {
+    if (m > 59) {
+
+        h = h + 1;
+    }
+
+    if (s > 59) {
+
+        m = m + 1;
+    }
+
+    if (h === 24) {
 
         h = 00;
+    }
+
+    if (h === 25) {
+
+        h = 01;
     }
 
     if (m === 60) {
@@ -201,10 +221,7 @@ setInterval(function relog2() {
         m = 00;
     }
 
-    if (s > 59) {
 
-        m = m + 1;
-    }
     if (s === 60) {
 
         s = 00;
@@ -353,12 +370,30 @@ setInterval(function relog2() {
     rel.innerHTML = `${h}:${m}:${s}`
 }, 1000)
 
+
+//horário de Amazonas////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 setInterval(function relog3() {
     let rel = document.getElementById('relogio3')
     let data = new Date();
     let h = data.getHours() + 23;
     let m = data.getMinutes();
     let s = data.getSeconds() + 30;
+
+    if (m > 59) {
+
+        h = h + 1;
+    }
+
+    if (s > 59) {
+
+        m = m + 1;
+    }
+
+    if (m === 60) {
+
+        m = 00;
+    }
 
     if (h > 24) {
 
@@ -370,9 +405,14 @@ setInterval(function relog3() {
         m = 00;
     }
 
-    if (h === 25) {
+    if (h === 24) {
 
         h = 00;
+    }
+
+    if (h === 25) {
+
+        h = 01;
     }
 
     if (h === -0) {
@@ -528,6 +568,8 @@ setInterval(function relog3() {
     rel.innerHTML = `${h}:${m}:${s}`
 }, 1000)
 
+//horário de Acre//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 setInterval(function relog4() {
     let rel = document.getElementById('relogio4')
     let data = new Date();
@@ -535,20 +577,36 @@ setInterval(function relog4() {
     let m = data.getMinutes();
     let s = data.getSeconds() + 30;
 
+    if (m > 59) {
+
+        h = h + 1;
+    }
+
+    if (s > 59) {
+
+        m = m + 1;
+    }
+
+    if (m === 60) {
+
+        m = 00;
+    }
+
     if (h > 24) {
 
         h = h - 24;
     }
 
-    if (h === 25) {
+    if (h === 24) {
 
         h = 00;
     }
 
-    if (h === 26) {
+    if (h === 25) {
 
         h = 01;
     }
+
 
     if (h === -0) {
 
@@ -560,15 +618,6 @@ setInterval(function relog4() {
         h = 01;
     }
 
-    if (m === 60) {
-
-        m = 00;
-    }
-
-    if (s > 59) {
-
-        m = m + 1;
-    }
     if (s === 60) {
 
         s = 00;
