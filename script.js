@@ -7,7 +7,10 @@ setInterval(function relog() {
     let m = data.getMinutes();
     let s = data.getSeconds() + 30;
 
+    if (h === 24) {
 
+        h = 00;
+    }
 
     if (m > 59) {
 
