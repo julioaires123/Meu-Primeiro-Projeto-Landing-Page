@@ -85,7 +85,7 @@ p.am {
 #relogio4 {
     position: fixed;
     top: 80%;
-    right: 9%;
+    right: 5%;
     font-size: 6rem;
     color: #0044ff;
     font-family: 'arial';
@@ -94,7 +94,7 @@ p.am {
 p.ac {
     position: fixed;
     top: 78%;
-    right: 18%;
+    right: 14%;
     justify-content: space-around;
     font-size: 1.6rem;
     color: #0044ff;
