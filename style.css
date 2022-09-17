@@ -15,12 +15,6 @@ body {
     background-color: rgb(0, 0, 0);
 }
 
-#relogio {
-    font-size: 23rem;
-    color: #0044ff;
-    font-family: 'montserrat';
-}
-
 h1 {
     position: fixed;
     top: 1%;
@@ -28,7 +22,16 @@ h1 {
     justify-content: space-around;
     font-size: 3rem;
     color: #0044ff;
-    font-family: 'montserrat';
+    font-family: 'arial';
+}
+
+p#relogio01 {
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    font-size: 21.6rem;
+    color: #0044ff;
+    font-family: 'arial';
 }
 
 
@@ -40,7 +43,7 @@ h1 {
     right: 70%;
     font-size: 6rem;
     color: #0044ff;
-    font-family: 'montserrat';
+    font-family: 'arial';
 }
 
 p.fn {
@@ -50,7 +53,7 @@ p.fn {
     justify-content: space-around;
     font-size: 1.6rem;
     color: #0044ff;
-    font-family: 'montserrat';
+    font-family: 'arial';
 }
 
 
@@ -63,7 +66,7 @@ p.fn {
     justify-content: space-around;
     font-size: 6rem;
     color: #0044ff;
-    font-family: 'montserrat';
+    font-family: 'arial';
 }
 
 p.am {
@@ -73,7 +76,7 @@ p.am {
     justify-content: space-around;
     font-size: 1.6rem;
     color: #0044ff;
-    font-family: 'montserrat';
+    font-family: 'arial';
 }
 
 
@@ -85,7 +88,7 @@ p.am {
     right: 7%;
     font-size: 6rem;
     color: #0044ff;
-    font-family: 'montserrat';
+    font-family: 'arial';
 }
 
 p.ac {
@@ -95,16 +98,17 @@ p.ac {
     justify-content: space-around;
     font-size: 1.6rem;
     color: #0044ff;
-    font-family: 'montserrat';
+    font-family: 'arial';
 }
 
 
 /*ok teste dia mes e ano*/
 
 section {
-    font-size: 4.6rem;
-    text-align: center;
-    margin: -20px;
+    position: fixed;
+    top: 53%;
+    right: 11%;
+    font-size: 4.3rem;
     color: #0044ff;
-    font-family: 'montserrat';
+    font-family: 'arial';
 }
