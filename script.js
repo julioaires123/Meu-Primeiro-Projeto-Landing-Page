@@ -1,7 +1,7 @@
-//horário de Brasília
+//horário de Brasília////////////////////////////////////////////////////////////////////////////////////////
 
 setInterval(function relog() {
-    let rel = document.getElementById('relogio')
+    let rel = document.getElementById('relogio01')
     let data = new Date();
     let h = data.getHours();
     let m = data.getMinutes();
@@ -177,9 +177,6 @@ setInterval(function relog() {
 
 
 }, 1000)
-
-
-
 
 
 //horário de Fernando de Noronha////////////////////////////////////////////////////////////////////////
@@ -769,6 +766,9 @@ setInterval(function relog4() {
     }
 
     rel.innerHTML = `${h}:${m}:${s}`
+
+    document.getElementById("relogio4").innerHTML = fullDate;
+
 }, 1000)
 
 //Dia mês e ano /////////////////////////////////////////////////////////////////////////////////////////////
@@ -794,10 +794,15 @@ let clock = function() {
     let fulldate = day[date.getDay()] + ', ' + date.getDate();
 
     document.getElementById("date").innerHTML = fullDate;
+
 }
 clock();
 
 setInterval(function clock() {
 
+
     clock();
+
+
+
 }, 1000);
