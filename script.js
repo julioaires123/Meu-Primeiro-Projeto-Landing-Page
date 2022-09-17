@@ -178,23 +178,7 @@ setInterval(function relog() {
 
 }, 1000)
 
-//Dia mês e ano /////////////////////////////////////////////////////////////////////////////////////////////
 
-let dt = new Date();
-let ndt = new Date();
-ndt.setDate(dt.getDate() + 0);
-let diasem = ndt.getDay();
-let dia = ndt.getDate();
-let mes = ndt.getMonth();
-let ano = ndt.getFullYear();
-
-
-
-let meses = new Array("Dezembro", "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Julho", "Agosto", "Setembro", "Outubro", "Novembro")
-let semanas = new Array("Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado")
-
-
-document.write(semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano);
 
 
 
@@ -786,3 +770,34 @@ setInterval(function relog4() {
 
     rel.innerHTML = `${h}:${m}:${s}`
 }, 1000)
+
+//Dia mês e ano /////////////////////////////////////////////////////////////////////////////////////////////
+let dia, mes, ano;
+let clock = function() {
+    let meses = new Array("Dezembro", "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Julho", "Agosto", "Setembro", "Outubro", "Novembro")
+    let semanas = new Array("Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado")
+
+
+
+
+    let rel = document.getElementById('date')
+    let data = new Date();
+    let diasem = data.getDay();
+    let dia = data.getDate();
+    let mes = data.getMonth();
+    let ano = data.getFullYear();
+
+
+
+
+    document.write(semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano);
+    let fulldate = day[date.getDay()] + ', ' + date.getDate();
+
+    document.getElementById("date").innerHTML = fullDate;
+}
+clock();
+
+setInterval(function clock() {
+
+    clock();
+}, 1000);
