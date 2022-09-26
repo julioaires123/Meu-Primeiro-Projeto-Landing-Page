@@ -103,15 +103,11 @@ p.ac {
 
 
 /*ok teste dia mes e ano*/
-
 section {
-    top: 49%;
-    position:flex;
-    height: 770px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4.5rem;
+    position: fixed;
+    top: 53%;
+    right: 4%;
+    font-size: 4.0rem;
     color: #0044ff;
     font-family: 'arial';
 }
