@@ -26,10 +26,13 @@ h1 {
 }
 
 p#relogio01 {
+    display: flex;
+    align-items: center;
     position: fixed;
+    right: 100%;
+    left: 0%;
     top: 0%;
-    right: 7%;
-    font-size: 21.9rem;
+    font-size: 21.5rem;
     color: #0044ff;
     font-family: 'arial';
 }
@@ -104,10 +107,10 @@ p.ac {
 
 /*ok teste dia mes e ano*/
 section {
-    position: fixed;
-    top: 53%;
-    right: 13%;
-    font-size: 4.0rem;
+
+    text-align: center;
+    padding-top: 25%;
+    font-size: 4.8rem;
     color: #0044ff;
     font-family: 'arial';
 }
