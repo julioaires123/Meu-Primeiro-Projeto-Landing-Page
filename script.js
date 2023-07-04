@@ -94,9 +94,7 @@ function exibirDataAtual() {
   elementoData.textContent = semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano;
 }
 
-exibirDataAtual();
-
+// Atualiza a cada segundo (ajuste o intervalo conforme necessário)
 setInterval(exibirDataAtual, 1000);
 
-setInterval(exibirDataAtual, 1000);
 
