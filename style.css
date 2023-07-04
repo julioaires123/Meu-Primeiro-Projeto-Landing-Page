@@ -63,7 +63,7 @@ p.fn {
 #relogio3 {
     position: fixed;
     top: 80%;
-    right: 30%;
+    right: 37%;
     justify-content: space-around;
     font-size: 6rem;
     color: #0044ff;
@@ -73,7 +73,7 @@ p.fn {
 p.am {
     position: fixed;
     top: 78%;
-    right: 41.8%;
+    right: 43.8%;
     justify-content: space-around;
     font-size: 1.6rem;
     color: #0044ff;
@@ -103,16 +103,12 @@ p.ac {
 }
 
 
+/*ok teste dia mes e ano*/
 section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
 
-.data {
-  font-size: 4.8rem;
-  color: #0044ff;
-  font-family: 'Arial';
+    text-align: center;
+    padding-top: 25%;
+    font-size: 4.8rem;
+    color: #0044ff;
+    font-family: 'arial';
 }
-
