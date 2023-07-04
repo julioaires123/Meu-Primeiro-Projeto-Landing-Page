@@ -143,7 +143,3 @@ exibirDataAtualizada();
 
 // Atualiza a data a cada segundo
 atualizarData();
-
-
-
-
