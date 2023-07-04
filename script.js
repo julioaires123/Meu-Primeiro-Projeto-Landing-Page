@@ -4,7 +4,7 @@
         let data = new Date();
         data.setHours(data.getHours() );  
         data.setMinutes(data.getMinutes() );      
-        data.setSeconds(data.getSeconds() +20);
+        data.setSeconds(data.getSeconds() + 20;
         let h = data.getHours();
         let m = data.getMinutes();
         let s = data.getSeconds();
@@ -128,7 +128,7 @@ function atualizarData() {
     proximaAtualizacao.setDate(proximaAtualizacao.getDate() + 1);
     proximaAtualizacao.setHours(0);
     proximaAtualizacao.setMinutes(0);
-    proximaAtualizacao.setSeconds(0) + 20);
+    proximaAtualizacao.setSeconds(0);
 
     let tempoAteProximaAtualizacao = proximaAtualizacao.getTime() - data.getTime();
 
