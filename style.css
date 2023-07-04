@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 
-
-/*horário de Brasília principal*/
-
 body {
     justify-content: center;
     align-items: center;
@@ -35,9 +32,6 @@ p#relogio01 {
     font-family: 'arial';
 }
 
-
-/*horário do fernando de noronha*/
-
 #relogio2 {
     position: fixed;
     top: 80%;
@@ -56,9 +50,6 @@ p.fn {
     color: #0044ff;
     font-family: 'arial';
 }
-
-
-/*horário do amazonas*/
 
 #relogio3 {
     position: fixed;
@@ -80,9 +71,6 @@ p.am {
     font-family: 'arial';
 }
 
-
-/*horário do acre*/
-
 #relogio4 {
     position: fixed;
     top: 80%;
@@ -102,21 +90,10 @@ p.ac {
     font-family: 'arial';
 }
 
-
-/*ok teste dia mes e ano*/
 section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+    text-align: center;
+    padding-top: 25%;
+    font-size: 4.8rem;
+    color: #0044ff;
+    font-family: 'arial';
 }
-
-.data {
-  font-size: 4.8rem;
-  color: #0044ff;
-  font-family: 'Arial';
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-
