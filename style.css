@@ -113,7 +113,7 @@ section {
 }
 
 .data {
-  text-align: fixed;
+ position: fixed;
   padding-top: 1%;
   font-size: 4.8rem;
   color: #0044ff;
