@@ -105,7 +105,7 @@ p.ac {
 
 /*ok teste dia mes e ano*/
 section {
-
+  display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -118,4 +118,5 @@ section {
   margin-top: auto;
   margin-bottom: auto;
 }
+
 
