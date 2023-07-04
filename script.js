@@ -87,7 +87,7 @@ function exibirDataAtualizada() {
         "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
     ];
     let semanas = [
-        "Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira",
+        "Domingo", "Segunda-Feira", "Terçaaa-Feira", "Quarta-Feira",
         "Quinta-Feira", "Sexta-Feira", "Sábado"
     ];
 
