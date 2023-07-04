@@ -1,102 +1,90 @@
-setInterval(function relog() {
-    let rel = document.getElementById('relogio01');
+//horário de Brasília////////////////////////////////////////////////////////////////////////////////////////
+        setInterval(function relog() {
+        let rel = document.getElementById('relogio01')
+        let data = new Date();
+        data.setSeconds(data.getSeconds() +20);
+        let h = data.getHours();
+        let m = data.getMinutes();
+        let s = data.getSeconds();
+          if (h < 10) {// coloca um zero antes dos números abaixo de dez: ex: 1: 1: 1 depois ex 01:01:01////////////////////
+           h = `0${h}`
+        }
+        if (m < 10) {
+           m = `0${m}`
+        }  
+        if (s < 10) {
+           s = `0${s}`
+        }
+        // Mostra a hora minutos e segundos na página /////////////////////////////////////////////////////
+            rel.innerHTML = `${h}:${m}:${s}`
+        })
+    //horário de Fernando de Noronha////////////////////////////////////////////////////////////////////////  
+    setInterval(function relog2() {
+        let rel = document.getElementById('relogio2')
+        let data = new Date();
+        data.setSeconds(data.getSeconds() +20);
+        data.setHours(data.getHours() +1);
+        let h = data.getHours() ; 
+        let m = data.getMinutes();
+        let s = data.getSeconds() 
+           if (h < 10) {  // coloca um zero antes dos números abaixo de dez: ex: 1: 1: 1 depois ex 01:01:01////////////////////
+              h = `0${h}`
+           } 
+           if (m < 10) {
+              m = `0${m}`
+           }
+           if (s < 10) {
+              s = `0${s}`
+           }
+           // Mostra a hora minutos e segundos na página /////////////////////////////////////////////////////
+               rel.innerHTML = `${h}:${m}:${s}`
+           })
+    //horário de Amazonas///////////////////////////////////////////////////////////////////////////////////   
+    setInterval(function relog3() {
+        let rel = document.getElementById('relogio3');
+        let data = new Date();
+        data.setSeconds(data.getSeconds() +20);
+        data.setHours(data.getHours() -1);
+        let h = data.getHours() ;
+        let m = data.getMinutes();
+        let s = data.getSeconds(); 
+          if (h < 10) {  // coloca um zero antes dos números abaixo de dez: ex: 1: 1: 1 depois ex 01:01:01////////////////////
+           h = `0${h}`
+        }
+        if (m < 10) {
+           m = `0${m}`
+        }
+        if (s < 10) {
+           s = `0${s}`
+        }
+            rel.innerHTML = `${h}:${m}:${s}`   // Mostra a hora minutos e segundos na página /////////////////////////////////////////////////////
+           })
+    //horário de Acre////////////////////////////////////////////////////////////////////////////////////
+    setInterval(function relog4() {
+        let rel = document.getElementById('relogio4')
+        let data = new Date();
+        data.setSeconds(data.getSeconds() +20);
+        data.setHours(data.getHours() -2);
+        let h = data.getHours();
+        let m = data.getMinutes();
+        let s = data.getSeconds() ;  
+          if (h < 10) { // coloca um zero antes dos números abaixo de dez: ex: 1: 1: 1 depois ex 01:01:01////////////////////
+           h = `0${h}`
+        }
+        if (m < 10) {
+           m = `0${m}`
+        } 
+        if (s < 10) {
+           s = `0${s}`
+        }
+            rel.innerHTML = `${h}:${m}:${s}`  // Mostra a hora minutos e segundos na página /////////////////////////////////////////////////////       
+           })   
+//Dia mês e ano /////////////////////////////////////////////////////////////////////////////////////////////
+let meses = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
+    let semanas = new Array("Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado");
     let data = new Date();
+    let diasem = data.getDay();
     let dia = data.getDate();
-    let mes = data.getMonth() + 1;
+    let mes = data.getMonth();
     let ano = data.getFullYear();
-    let h = data.getHours();
-    let m = data.getMinutes();
-    let s = data.getSeconds();
-    if (h < 10) {
-        h = `0${h}`;
-    }
-    if (m < 10) {
-        m = `0${m}`;
-    }
-    if (s < 10) {
-        s = `0${s}`;
-    }
-    rel.innerHTML = `${h}:${m}:${s}`;
-    document.getElementById('data01').innerHTML = `${dia}/${mes}/${ano}`;
-}, 1000);
-
-setInterval(function relog2() {
-    let rel = document.getElementById('relogio2');
-    let data = new Date();
-    data.setHours(data.getHours() + 1);
-    let dia = data.getDate();
-    let mes = data.getMonth() + 1;
-    let ano = data.getFullYear();
-    let h = data.getHours();
-    let m = data.getMinutes();
-    let s = data.getSeconds();
-    if (h < 10) {
-        h = `0${h}`;
-    }
-    if (m < 10) {
-        m = `0${m}`;
-    }
-    if (s < 10) {
-        s = `0${s}`;
-    }
-    rel.innerHTML = `${h}:${m}:${s}`;
-    document.getElementById('data2').innerHTML = `${dia}/${mes}/${ano}`;
-}, 1000);
-
-setInterval(function relog3() {
-    let rel = document.getElementById('relogio3');
-    let data = new Date();
-    data.setHours(data.getHours() - 1);
-    let dia = data.getDate();
-    let mes = data.getMonth() + 1;
-    let ano = data.getFullYear();
-    let h = data.getHours();
-    let m = data.getMinutes();
-    let s = data.getSeconds();
-    if (h < 10) {
-        h = `0${h}`;
-    }
-    if (m < 10) {
-        m = `0${m}`;
-    }
-    if (s < 10) {
-        s = `0${s}`;
-    }
-    rel.innerHTML = `${h}:${m}:${s}`;
-    document.getElementById('data3').innerHTML = `${dia}/${mes}/${ano}`;
-}, 1000);
-
-
-
-// Função para obter o nome do dia da semana por extenso
-function obterDiaSemanaPorExtenso(diaSemana) {
-    let diasSemana = [
-        'Domingo',
-        'Segunda-feira',
-        'Terça-feira',
-        'Quarta-feira',
-        'Quinta-feira',
-        'Sexta-feira',
-        'Sábado'
-    ];
-    return diasSemana[diaSemana];
-}
-
-// Função para obter o nome do mês por extenso
-function obterNomeMesPorExtenso(mes) {
-    let meses = [
-        'Janeiro',
-        'Fevereiro',
-        'Março',
-        'Abril',
-        'Maio',
-        'Junho',
-        'Julho',
-        'Agosto',
-        'Setembro',
-        'Outubro',
-        'Novembro',
-        'Dezembro'
-    ];
-    return meses[mes];
-}
+    document.write(semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano);
