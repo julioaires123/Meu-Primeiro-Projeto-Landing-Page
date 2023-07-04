@@ -2,9 +2,7 @@
         setInterval(function relog() {
         let rel = document.getElementById('relogio01')
         let data = new Date();
-        data.setHours(data.getHours() );  
-        data.setMinutes(data.getMinutes() );      
-        data.setSeconds(data.getSeconds() + 20;
+        data.setSeconds(data.getSeconds() +20);
         let h = data.getHours();
         let m = data.getMinutes();
         let s = data.getSeconds();
@@ -83,27 +81,33 @@
            })   
 //Dia mês e ano /////////////////////////////////////////////////////////////////////////////////////////////
 // Função para exibir a data atualizada
-let meses = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
-let semanas = new Array("Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado");
+function exibirDataAtualizada() {
+    let meses = [
+        "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+        "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+    ];
+    let semanas = [
+        "Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira",
+        "Quinta-Feira", "Sexta-Feira", "Sábado"
+    ];
 
-function exibirDataAtual() {
-  let data = new Date();
-  let diasem = data.getDay();
-  let dia = data.getDate();
-  let mes = data.getMonth();
-  let ano = data.getFullYear();
-  document.write(semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano);
+    let data = new Date();
+    let diasem = data.getDay();
+    let dia = data.getDate();
+    let mes = data.getMonth();
+    let ano = data.getFullYear();
+
+    // Atualiza o conteúdo do elemento com o ID "date"
+    document.getElementById("date").innerHTML = semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano;
 }
-
-// Executa a função inicialmente
-exibirDataAtual();
-
-// Atualiza a cada segundo (ajuste o intervalo conforme necessário)
-setInterval(exibirDataAtual, 1000);
-
 
 // Chama a função para exibir a data atualizada
 exibirDataAtualizada();
 
-// Atualiza a data a cada segundo
-atualizarData();
+// Atualiza a data à meia-noite
+setInterval(function() {
+    let data = new Date();
+    if (data.getHours() === 00 && data.getMinutes() === 00 && data.getSeconds() === 00) {
+        exibirDataAtualizada();
+    }
+}, 1000);
