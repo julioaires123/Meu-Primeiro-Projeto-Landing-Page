@@ -107,7 +107,7 @@ exibirDataAtualizada();
 // Atualiza a data à meia-noite
 setInterval(function() {
     let data = new Date();
-    if (data.getHours() === 0 && data.getMinutes() === 0 && data.getSeconds() === 0) {
+    if (data.getHours() === 00 && data.getMinutes() === 00 && data.getSeconds() === 00) {
         exibirDataAtualizada();
     }
 }, 1000);
