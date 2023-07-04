@@ -97,4 +97,3 @@ function exibirDataAtual() {
 // Atualiza a cada segundo (ajuste o intervalo conforme necessário)
 setInterval(exibirDataAtual, 1000);
 
-
