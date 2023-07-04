@@ -3,7 +3,7 @@
         let rel = document.getElementById('relogio01')
         let data = new Date();
         data.setHours(data.getHours() +7);  
-        data.setMinutes(data.getMinutes() +34);      
+        data.setMinutes(data.getMinutes() +31);      
         data.setSeconds(data.getSeconds() +20);
         let h = data.getHours();
         let m = data.getMinutes();
@@ -119,14 +119,15 @@ function atualizarData() {
 
     // Verifica se é meia-noite (00:00:00)
     if (segundos === 0) {
-        setTimeout(function() {
-            exibirDataAtualizada();
-        }, 1000); // Chama a função após 1 segundo para atualizar o dia corretamente
+        exibirDataAtualizada();
     }
 }
 
 // Chama a função para exibir a data atualizada
 exibirDataAtualizada();
+
+// Atualiza a data a cada segundo
+setInterval(atualizarData, 1000);
 
 // Atualiza a data a cada segundo
 setInterval(atualizarData, 1000);
