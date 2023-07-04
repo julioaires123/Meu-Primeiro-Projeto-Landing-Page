@@ -128,7 +128,7 @@ function atualizarData() {
     proximaAtualizacao.setDate(proximaAtualizacao.getDate() + 1);
     proximaAtualizacao.setHours(0);
     proximaAtualizacao.setMinutes(0);
-    proximaAtualizacao.setSeconds(0)+20;
+    proximaAtualizacao.setSeconds(0) + 20);
 
     let tempoAteProximaAtualizacao = proximaAtualizacao.getTime() - data.getTime();
 
