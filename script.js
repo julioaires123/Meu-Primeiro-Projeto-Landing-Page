@@ -66,28 +66,7 @@ setInterval(function relog3() {
     document.getElementById('data3').innerHTML = `${dia}/${mes}/${ano}`;
 }, 1000);
 
-setInterval(function relog() {
-    let rel = document.getElementById('relogio01');
-    let data = new Date();
-    let diaSemana = obterDiaSemanaPorExtenso(data.getDay());
-    let dia = data.getDate();
-    let mes = obterNomeMesPorExtenso(data.getMonth());
-    let ano = data.getFullYear();
-    let h = data.getHours();
-    let m = data.getMinutes();
-    let s = data.getSeconds();
-    if (h < 10) {
-        h = `0${h}`;
-    }
-    if (m < 10) {
-        m = `0${m}`;
-    }
-    if (s < 10) {
-        s = `0${s}`;
-    }
-    rel.innerHTML = `${diaSemana}, ${dia} de ${mes} de ${ano}`;
-    document.getElementById('hora01').innerHTML = `${h}:${m}:${s}`;
-}, 1000);
+
 
 // Função para obter o nome do dia da semana por extenso
 function obterDiaSemanaPorExtenso(diaSemana) {
