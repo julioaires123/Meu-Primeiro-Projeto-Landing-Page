@@ -81,25 +81,10 @@
            })   
 //Dia mês e ano /////////////////////////////////////////////////////////////////////////////////////////////
 let meses = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
-let semanas = new Array("Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado");
-
-function exibirDataAtual() {
-  let data = new Date();
-  let diasem = data.getDay();
-  let dia = data.getDate();
-  let mes = data.getMonth();
-  let ano = data.getFullYear();
-
-  let elementoData = document.getElementById("data");
-  elementoData.textContent = semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano;
-}
-
-exibirDataAtual();
-
-setInterval(exibirDataAtual, 1000);
-
-
-
-
-
-
+    let semanas = new Array("Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado");
+    let data = new Date();
+    let diasem = data.getDay();
+    let dia = data.getDate();
+    let mes = data.getMonth();
+    let ano = data.getFullYear();
+    document.write(semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano);
