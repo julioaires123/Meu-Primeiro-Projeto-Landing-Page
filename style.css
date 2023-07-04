@@ -104,19 +104,15 @@ p.ac {
 
 
 section {
-
-    text-align: center;
-    padding-top: 25%;
-    font-size: 4.8rem;
-    color: #0044ff;
-    font-family: 'arial';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .data {
- position: fixed;
-  padding-top: 1%;
   font-size: 4.8rem;
   color: #0044ff;
-  font-family: 'arial';
+  font-family: 'Arial';
 }
 
