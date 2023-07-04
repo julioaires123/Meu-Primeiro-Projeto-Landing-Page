@@ -80,11 +80,30 @@
             rel.innerHTML = `${h}:${m}:${s}`  // Mostra a hora minutos e segundos na página /////////////////////////////////////////////////////       
            })   
 //Dia mês e ano /////////////////////////////////////////////////////////////////////////////////////////////
-let meses = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
-    let semanas = new Array("Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado");
+// Função para exibir a data atualizada
+function exibirDataAtualizada() {
+    let meses = [
+        "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+        "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+    ];
+    let semanas = [
+        "Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira",
+        "Quinta-Feira", "Sexta-Feira", "Sábado"
+    ];
+
     let data = new Date();
     let diasem = data.getDay();
     let dia = data.getDate();
     let mes = data.getMonth();
     let ano = data.getFullYear();
-    document.write(semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano);
+
+    // Atualiza o conteúdo do elemento com o ID "date"
+    document.getElementById("date").innerHTML = semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano;
+}
+
+// Chama a função para exibir a data atualizada
+exibirDataAtualizada();
+
+// Atualiza a data a cada segundo
+setInterval(exibirDataAtualizada, 1000);
+
