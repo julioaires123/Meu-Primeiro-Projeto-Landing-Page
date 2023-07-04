@@ -106,14 +106,14 @@ p.ac {
 /*ok teste dia mes e ano*/
 section {
     text-align: center;
-    padding-top: 5%;
+    padding-top: 25%;
     font-size: 4.8rem;
     color: #0044ff;
     font-family: 'arial';
 }
 section {
     text-align: center;
-    padding-top: 5px; /* Ou outro valor adequado */
+    padding-top: 55px; /* Ou outro valor adequado */
     font-size: 4.8rem;
     color: #0044ff;
     font-family: 'arial';
