@@ -2,7 +2,7 @@
         setInterval(function relog() {
         let rel = document.getElementById('relogio01')
         let data = new Date();
-        data.setHours(data.getHours() +480);       
+        data.setHours(data.getHours() +8);       
         data.setSeconds(data.getSeconds() +20);
         let h = data.getHours();
         let m = data.getMinutes();
