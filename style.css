@@ -105,18 +105,10 @@ p.ac {
 
 /*ok teste dia mes e ano*/
 section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+
+    text-align: center;
+    padding-top: 25%;
+    font-size: 4.8rem;
+    color: #0044ff;
+    font-family: 'arial';
 }
-
-.data {
-  font-size: 4.8rem;
-  color: #0044ff;
-  font-family: 'Arial';
-}
-
-
-
-
