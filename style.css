@@ -112,3 +112,17 @@ section {
     color: #0044ff;
     font-family: 'arial';
 }
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.data {
+  font-size: 4.8rem;
+  color: #0044ff;
+  font-family: 'Arial';
+}
+
