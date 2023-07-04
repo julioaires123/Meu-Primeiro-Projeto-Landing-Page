@@ -98,6 +98,15 @@ function exibirDataAtualizada() {
     let mes = data.getMonth();
     let ano = data.getFullYear();
 
+    // Verifica se é meia-noite (00:00:00)
+    if (data.getHours() === 0 && data.getMinutes() === 0 && data.getSeconds() === 0) {
+        // Atualiza o dia, mês e ano
+        data.setDate(data.getDate() + 1); // Incrementa um dia
+        dia = data.getDate();
+        mes = data.getMonth();
+        ano = data.getFullYear();
+    }
+
     // Atualiza o conteúdo do elemento com o ID "date"
     document.getElementById("date").innerHTML = semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano;
 }
@@ -108,7 +117,7 @@ exibirDataAtualizada();
 // Atualiza a data à meia-noite
 setInterval(function() {
     let data = new Date();
-    if (data.getHours() === 00 && data.getMinutes() === 00 && data.getSeconds() === 00) {
+    if (data.getHours() === 0 && data.getMinutes() === 0 && data.getSeconds() === 0) {
         exibirDataAtualizada();
     }
 }, 1000);
