@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pr-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta http-equiv="refresh" content="">
 
     <link rel="stylesheet" href="style.css">
 
@@ -16,15 +16,24 @@
     <h1>HORÁRIO DE BRASÍLIA</h1>
 
     <div>
-        <p id="relogio01"></p>
-        <p id="Relogio05"></p>
-        <p id="date"></p>
-        <p class="fn">FERNANDO DE NORONHA</p>
-        <div id="relogio2"></div>
-        <p class="am">AMAZONAS</p>
-        <div id="relogio3"></div>
-        <p class="ac">ACRE</p>
-        <div id="relogio4"></div>
+        <section onload="relog()">
+            <p id="relogio01"></p>
+        </section>
+
+        <section onload="relog2()">
+            <p class="fn">FERNANDO DE NORONHA</p>
+            <div id="relogio2"></div>
+        </section>
+
+        <section onload="relog3()">
+            <p class="am">AMAZONAS</p>
+            <div id="relogio3"></div>
+        </section>
+
+        <section onload="relog4()">
+            <p class="ac">ACRE</p>
+            <div id="relogio4"></div>
+        </section>
     </div>
 
     <script src="script.js"></script>
