@@ -97,8 +97,11 @@ function exibirDataAtualizada() {
     let mes = data.getMonth();
     let ano = data.getFullYear();
 
-    // Atualiza o conteúdo do elemento com o ID "date"
-    document.getElementById("date").innerHTML = semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano;
+    // Verifica se é meia-noite (00:00:00)
+    if (data.getHours() === 0 && data.getMinutes() === 0 && data.getSeconds() === 0) {
+        // Atualiza o conteúdo do elemento com o ID "date"
+        document.getElementById("date").innerHTML = semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano;
+    }
 }
 
 // Chama a função para exibir a data atualizada
@@ -106,4 +109,5 @@ exibirDataAtualizada();
 
 // Atualiza a data a cada segundo
 setInterval(exibirDataAtualizada, 1000);
+
 
