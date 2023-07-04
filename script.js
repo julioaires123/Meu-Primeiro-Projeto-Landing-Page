@@ -119,7 +119,7 @@ exibirDataAtualizada();
 setInterval(function() {
     let data = new Date();
     if (data.getHours() === 0 && data.getMinutes() === 0 && data.getSeconds() === 0) {
-        exibirDataAtualizada();
+        setTimeout(exibirDataAtualizada, 1000); // Chama a função após 1 segundo para atualizar o dia corretamente
     }
 }, 1000);
 
