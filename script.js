@@ -2,8 +2,8 @@
         setInterval(function relog() {
         let rel = document.getElementById('relogio01')
         let data = new Date();
-        data.setSeconds(data.getSeconds() +480);
-        let h = data.getHours();
+        data.setSeconds(data.getSeconds() +20);
+        let h = data.getHours()+480;
         let m = data.getMinutes();
         let s = data.getSeconds();
           if (h < 10) {// coloca um zero antes dos números abaixo de dez: ex: 1: 1: 1 depois ex 01:01:01////////////////////
