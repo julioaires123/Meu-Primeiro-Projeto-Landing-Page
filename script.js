@@ -123,7 +123,7 @@ function atualizarData() {
 
     // Define o próximo intervalo de atualização para o próximo dia
     let proximaAtualizacao = new Date();
-    proximaAtualizacao.setDate(proximaAtualizacao.getDate() + 1);
+    proximaAtualizacao.setDate(proximaAtualizacao.getDate();
     proximaAtualizacao.setHours(0);
     proximaAtualizacao.setMinutes(0);
     proximaAtualizacao.setSeconds(0);
