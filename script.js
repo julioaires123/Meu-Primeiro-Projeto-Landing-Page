@@ -1,60 +1,91 @@
-// Função para obter a hora da internet
-function obterHoraInternet(timezone) {
-  return new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', `https://worldtimeapi.org/api/timezone/${timezone}`);
-    xhr.onload = () => {
-      if (xhr.status === 200) {
-        const response = JSON.parse(xhr.responseText);
-        const dateTime = new Date(response.datetime);
-        resolve(dateTime);
-      } else {
-        reject(xhr.statusText);
-      }
-    };
-    xhr.onerror = () => {
-      reject(xhr.statusText);
-    };
-    xhr.send();
-  });
-}
-
-// Função para exibir a hora de uma região específica
-function exibirHora(timezone, elementId) {
-  let rel = document.getElementById(elementId);
-  obterHoraInternet(timezone)
-    .then((dateTime) => {
-      let h = dateTime.getHours();
-      let m = dateTime.getMinutes();
-      let s = dateTime.getSeconds();
-
-      if (h < 10) {
-        h = `0${h}`;
-      }
-      if (m < 10) {
-        m = `0${m}`;
-      }
-      if (s < 10) {
-        s = `0${s}`;
-      }
-
-      rel.innerHTML = `${h}:${m}:${s}`;
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-}
-
+//horário de Brasília////////////////////////////////////////////////////////////////////////////////////////
+        setInterval(function relog() {
+        let rel = document.getElementById('relogio01')
+        let data = new Date();
+        data.setSeconds(data.getSeconds() +00);
+        let h = data.getHours();
+        let m = data.getMinutes();
+        let s = data.getSeconds();
+          if (h < 10) {// coloca um zero antes dos números abaixo de dez: ex: 1: 1: 1 depois ex 01:01:01////////////////////
+           h = `0${h}`
+        }
+        if (m < 10) {
+           m = `0${m}`
+        }  
+        if (s < 10) {
+           s = `0${s}`
+        }
+        // Mostra a hora minutos e segundos na página /////////////////////////////////////////////////////
+            rel.innerHTML = `${h}:${m}:${s}`
+        })
+    //horário de Fernando de Noronha////////////////////////////////////////////////////////////////////////  
+    setInterval(function relog2() {
+        let rel = document.getElementById('relogio2')
+        let data = new Date();
+        data.setSeconds(data.getSeconds() +00);
+        data.setHours(data.getHours() +1);
+        let h = data.getHours() ; 
+        let m = data.getMinutes();
+        let s = data.getSeconds() 
+           if (h < 10) {  // coloca um zero antes dos números abaixo de dez: ex: 1: 1: 1 depois ex 01:01:01////////////////////
+              h = `0${h}`
+           } 
+           if (m < 10) {
+              m = `0${m}`
+           }
+           if (s < 10) {
+              s = `0${s}`
+           }
+           // Mostra a hora minutos e segundos na página /////////////////////////////////////////////////////
+               rel.innerHTML = `${h}:${m}:${s}`
+           })
+    //horário de Amazonas///////////////////////////////////////////////////////////////////////////////////   
+    setInterval(function relog3() {
+        let rel = document.getElementById('relogio3');
+        let data = new Date();
+        data.setSeconds(data.getSeconds() +00);
+        data.setHours(data.getHours() -1);
+        let h = data.getHours() ;
+        let m = data.getMinutes();
+        let s = data.getSeconds(); 
+          if (h < 10) {  // coloca um zero antes dos números abaixo de dez: ex: 1: 1: 1 depois ex 01:01:01////////////////////
+           h = `0${h}`
+        }
+        if (m < 10) {
+           m = `0${m}`
+        }
+        if (s < 10) {
+           s = `0${s}`
+        }
+            rel.innerHTML = `${h}:${m}:${s}`   // Mostra a hora minutos e segundos na página /////////////////////////////////////////////////////
+           })
+    //horário de Acre////////////////////////////////////////////////////////////////////////////////////
+    setInterval(function relog4() {
+        let rel = document.getElementById('relogio4')
+        let data = new Date();
+        data.setSeconds(data.getSeconds() + 00);
+        data.setHours(data.getHours() -2);
+        let h = data.getHours();
+        let m = data.getMinutes();
+        let s = data.getSeconds() ;  
+          if (h < 10) { // coloca um zero antes dos números abaixo de dez: ex: 1: 1: 1 depois ex 01:01:01////////////////////
+           h = `0${h}`
+        }
+        if (m < 10) {
+           m = `0${m}`
+        } 
+        if (s < 10) {
+           s = `0${s}`
+        }
+            rel.innerHTML = `${h}:${m}:${s}`  // Mostra a hora minutos e segundos na página /////////////////////////////////////////////////////       
+           })   
+//Dia mês e ano /////////////////////////////////////////////////////////////////////////////////////////////
 // Função para exibir a data atualizada
 function exibirDataAtualizada() {
   let meses = [
-    "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
-    "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
-  ];
+    "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho","Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
   let semanas = [
-    "Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira",
-    "Quinta-Feira", "Sexta-Feira", "Sábado"
-  ];
+    "Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
 
   let data = new Date();
   let diasem = data.getDay();
@@ -62,26 +93,47 @@ function exibirDataAtualizada() {
   let mes = data.getMonth();
   let ano = data.getFullYear();
 
+  // Verifica se é meia-noite (00:00:00)
+  if (data.getHours() === 0 && data.getMinutes() === 0 && data.getSeconds() === 0) {
+    // Incrementa um dia
+    data.setDate(data.getDate() + 0);
+    dia = data.getDate();
+    mes = data.getMonth();
+    ano = data.getFullYear();
+  }
+
   // Atualiza o conteúdo do elemento com o ID "date"
   document.getElementById("date").innerHTML = semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano;
 }
 
-// Chama as funções para exibir os horários das diferentes regiões do Brasil
-exibirHora("America/Sao_Paulo", "relogio01");
-exibirHora("America/Noronha", "relogio2");
-exibirHora("America/Manaus", "relogio3");
-exibirHora("America/Rio_Branco", "relogio4");
+// Função para atualizar a data a cada segundo
+function atualizarData() {
+  let data = new Date();
+  let horas = data.getHours();
+  let minutos = data.getMinutes();
+  let segundos = data.getSeconds();
 
-// Atualiza os horários das regiões a cada segundo
-setInterval(() => {
-  exibirHora("America/Sao_Paulo", "relogio01");
-  exibirHora("America/Noronha", "relogio2");
-  exibirHora("America/Manaus", "relogio3");
-  exibirHora("America/Rio_Branco", "relogio4");
-}, 1000);
+  // Verifica se é meia-noite (00:00:00)
+  if (horas === 0 && minutos === 0 && segundos === 0) {
+    exibirDataAtualizada();
+
+    // Define o próximo intervalo de atualização para o próximo dia
+    let proximaAtualizacao = new Date();
+    proximaAtualizacao.setDate(proximaAtualizacao.getDate() + 0);     
+    proximaAtualizacao.setHours(0);
+    proximaAtualizacao.setMinutes(0);
+    proximaAtualizacao.setSeconds(0);
+
+    let tempoAteProximaAtualizacao = proximaAtualizacao.getTime() - data.getTime();
+
+    setTimeout(atualizarData, tempoAteProximaAtualizacao);
+  } else {
+    setTimeout(atualizarData, 1000); // Chama a função novamente após 1 segundo
+  }
+}
 
 // Chama a função para exibir a data atualizada
 exibirDataAtualizada();
 
 // Atualiza a data a cada segundo
-setInterval(exibirDataAtualizada, 1000);
+atualizarData();
