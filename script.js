@@ -81,8 +81,19 @@ function atualizarData() {
   }
 }
 
-// Chama a função para exibir a hora de Brasília
+// Chama as funções para exibir os horários das diferentes regiões do Brasil
 exibirHora("Brasília", "America/Sao_Paulo", "relogio01");
+exibirHora("Fernando de Noronha", "America/Noronha", "relogio2");
+exibirHora("Amazonas", "America/Manaus", "relogio3");
+exibirHora("Acre", "America/Rio_Branco", "relogio4");
+
+// Atualiza os horários das regiões a cada segundo
+setInterval(() => {
+  exibirHora("Brasília", "America/Sao_Paulo", "relogio01");
+  exibirHora("Fernando de Noronha", "America/Noronha", "relogio2");
+  exibirHora("Amazonas", "America/Manaus", "relogio3");
+  exibirHora("Acre", "America/Rio_Branco", "relogio4");
+}, 1000);
 
 // Chama a função para exibir a data atualizada
 exibirDataAtualizada();
