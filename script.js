@@ -73,9 +73,9 @@ function atualizarData() {
 
 // Função para incrementar a data em 1 dia a cada 5 segundos
 function incrementarData() {
-  let data = new Date();
-  data.setDate(data.getDate() + 1);
-  exibirDataAtualizada(data);
+  let dataAtual = new Date();
+  let novaData = new Date(dataAtual.getTime() + (5 * 1000)); // Incrementa 5 segundos
+  exibirDataAtualizada(novaData);
 }
 
 // Chama as funções para exibir os horários das diferentes regiões do Brasil
