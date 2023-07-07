@@ -44,7 +44,7 @@ function exibirHora(timezone, elementId) {
 }
 
 // Função para exibir a data atualizada
-function exibirDataAtualizada() {
+function exibirDataAtualizada(dateTime) {
   let meses = [
     "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
     "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
@@ -54,19 +54,18 @@ function exibirDataAtualizada() {
     "Quinta-Feira", "Sexta-Feira", "Sábado"
   ];
 
-  let data = new Date();
-  let diasem = data.getDay();
-  let dia = data.getDate();
-  let mes = data.getMonth();
-  let ano = data.getFullYear();
+  let diasem = dateTime.getDay();
+  let dia = dateTime.getDate();
+  let mes = dateTime.getMonth();
+  let ano = dateTime.getFullYear();
 
   // Verifica se é meia-noite (00:00:00)
-  if (data.getHours() === 0 && data.getMinutes() === 0 && data.getSeconds() === 0) {
+  if (dateTime.getHours() === 0 && dateTime.getMinutes() === 0 && dateTime.getSeconds() === 0) {
     // Incrementa um dia
-    data.setDate(data.getDate() + 1);
-    dia = data.getDate();
-    mes = data.getMonth();
-    ano = data.getFullYear();
+    dateTime.setDate(dateTime.getDate() + 1);
+    dia = dateTime.getDate();
+    mes = dateTime.getMonth();
+    ano = dateTime.getFullYear();
   }
 
   // Atualiza o conteúdo do elemento com o ID "date"
@@ -75,10 +74,11 @@ function exibirDataAtualizada() {
 
 // Função para atualizar a data à meia-noite
 function atualizarData() {
-  let data = new Date();
-  if (data.getHours() === 0 && data.getMinutes() === 0 && data.getSeconds() === 0) {
-    exibirDataAtualizada();
-  }
+  obterHoraInternet("America/Sao_Paulo").then((dateTime) => {
+    exibirDataAtualizada(dateTime);
+  }).catch((error) => {
+    console.error(error);
+  });
 }
 
 // Chama as funções para exibir os horários das diferentes regiões do Brasil
@@ -95,8 +95,6 @@ setInterval(() => {
   exibirHora("America/Rio_Branco", "relogio4");
 }, 1000);
 
-// Chama a função para exibir a data atualizada
-exibirDataAtualizada();
-
-// Atualiza a data à meia-noite
+// Chama a função para atualizar a data à meia-noite
+atualizarData();
 setInterval(atualizarData, 1000);
