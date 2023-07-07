@@ -44,7 +44,7 @@ function exibirHora(timezone, elementId) {
 }
 
 // Função para exibir a data atualizada
-function exibirDataAtualizada() {
+function exibirDataAtualizada(data) {
   let meses = [
     "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
     "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
@@ -54,26 +54,28 @@ function exibirDataAtualizada() {
     "Quinta-Feira", "Sexta-Feira", "Sábado"
   ];
 
-  obterHoraInternet("America/Sao_Paulo").then((dateTime) => {
-    let data = dateTime;
-    let diasem = data.getDay();
-    let dia = data.getDate();
-    let mes = data.getMonth();
-    let ano = data.getFullYear();
+  let diasem = data.getDay();
+  let dia = data.getDate();
+  let mes = data.getMonth();
+  let ano = data.getFullYear();
 
-    // Atualiza o conteúdo do elemento com o ID "date"
-    document.getElementById("date").innerHTML = semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano;
-  }).catch((error) => {
-    console.error(error);
-  });
+  // Atualiza o conteúdo do elemento com o ID "date"
+  document.getElementById("date").innerHTML = semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano;
 }
 
 // Função para atualizar a data à meia-noite
 function atualizarData() {
   let data = new Date();
   if (data.getHours() === 0 && data.getMinutes() === 0 && data.getSeconds() === 0) {
-    exibirDataAtualizada();
+    exibirDataAtualizada(data);
   }
+}
+
+// Função para incrementar a data em 1 dia a cada 5 segundos
+function incrementarData() {
+  let data = new Date();
+  data.setDate(data.getDate() + 1);
+  exibirDataAtualizada(data);
 }
 
 // Chama as funções para exibir os horários das diferentes regiões do Brasil
@@ -91,7 +93,11 @@ setInterval(() => {
 }, 1000);
 
 // Chama a função para exibir a data atualizada
-exibirDataAtualizada();
+let dataAtual = new Date();
+exibirDataAtualizada(dataAtual);
 
 // Atualiza a data à meia-noite
 setInterval(atualizarData, 1000);
+
+// Incrementa a data em 1 dia a cada 5 segundos
+setInterval(incrementarData, 5000);
