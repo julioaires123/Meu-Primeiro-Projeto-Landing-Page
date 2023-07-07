@@ -20,7 +20,7 @@ function obterHoraInternet(timezone) {
 }
 
 // Função para exibir a hora de uma região específica
-function exibirHora(regiao, timezone, elementId) {
+function exibirHora(timezone, elementId) {
   let rel = document.getElementById(elementId);
   obterHoraInternet(timezone).then((dateTime) => {
     let h = dateTime.getHours();
@@ -37,7 +37,7 @@ function exibirHora(regiao, timezone, elementId) {
       s = `0${s}`;
     }
 
-    rel.innerHTML = `${regiao}: ${h}:${m}:${s}`;
+    rel.innerHTML = `${h}:${m}:${s}`;
   }).catch((error) => {
     console.error(error);
   });
@@ -82,17 +82,17 @@ function atualizarData() {
 }
 
 // Chama as funções para exibir os horários das diferentes regiões do Brasil
-exibirHora("Brasília", "America/Sao_Paulo", "relogio01");
-exibirHora("Fernando de Noronha", "America/Noronha", "relogio2");
-exibirHora("Amazonas", "America/Manaus", "relogio3");
-exibirHora("Acre", "America/Rio_Branco", "relogio4");
+exibirHora("America/Sao_Paulo", "relogio01");
+exibirHora("America/Noronha", "relogio2");
+exibirHora("America/Manaus", "relogio3");
+exibirHora("America/Rio_Branco", "relogio4");
 
 // Atualiza os horários das regiões a cada segundo
 setInterval(() => {
-  exibirHora("Brasília", "America/Sao_Paulo", "relogio01");
-  exibirHora("Fernando de Noronha", "America/Noronha", "relogio2");
-  exibirHora("Amazonas", "America/Manaus", "relogio3");
-  exibirHora("Acre", "America/Rio_Branco", "relogio4");
+  exibirHora("America/Sao_Paulo", "relogio01");
+  exibirHora("America/Noronha", "relogio2");
+  exibirHora("America/Manaus", "relogio3");
+  exibirHora("America/Rio_Branco", "relogio4");
 }, 1000);
 
 // Chama a função para exibir a data atualizada
