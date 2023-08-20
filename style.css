@@ -130,4 +130,12 @@ p.sr {
     color: #0044ff;
     font-family: 'arial';
 }
-
+a.sr {
+    position: fixed;
+    top: 95%;
+    right: 43.8%;
+    justify-content: space-around;
+    font-size: 1.6rem;
+    color: #0044ff;
+    font-family: 'arial';
+}
