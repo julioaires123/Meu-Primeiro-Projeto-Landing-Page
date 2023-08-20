@@ -80,6 +80,15 @@ p.am {
     color: #0044ff;
     font-family: 'arial';
 }
+p.sr {
+    position: fixed;
+    top: 78%;
+    right: 43.8%;
+    justify-content: space-around;
+    font-size: 1.6rem;
+    color: #0044ff;
+    font-family: 'arial';
+}
 
 
 /*horário do acre*/
