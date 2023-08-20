@@ -25,15 +25,6 @@ h1 {
     font-family: 'arial';
 }
 
-h3 {
-    position: fixed;
-    top: 15%;
-    right: 32%;
-    justify-content: space-around;
-    font-size: 3rem;
-    color: #0044ff;
-    font-family: 'arial';
-}
 
 p#relogio01 {
     position: fixed;
