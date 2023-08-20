@@ -63,7 +63,7 @@ p.fn {
 
 #relogio3 {
     position: fixed;
-    top: 100%;
+    top: 80%;
     right: 37%;
     justify-content: space-around;
     font-size: 6rem;
@@ -123,7 +123,7 @@ section {
 
 p.sr {
     position: fixed;
-    top: 78%;
+    top: 100%;
     right: 43.8%;
     justify-content: space-around;
     font-size: 1.6rem;
