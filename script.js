@@ -4,7 +4,7 @@
         let data = new Date();
         data.setHours(data.getHours());
         data.setSeconds(data.getSeconds() +00);
-        data.setHours(data.getHours() +5);
+        data.setHours(data.getHours() +3);
         let h = data.getHours();
         let m = data.getMinutes();
         let s = data.getSeconds();
