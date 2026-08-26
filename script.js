@@ -1,129 +1,59 @@
-// horário de Brasília ////////////////////////////////////////////////////////////////////////
-setInterval(function relog() {
-    let rel = document.getElementById('relogio01');
-    let data = new Date();
-    data.setHours(data.getHours());
-    data.setSeconds(data.getSeconds() + 19);
-    data.setHours(data.getHours() + 3);
-    let h = data.getHours();
-    let m = data.getMinutes();
-    let s = data.getSeconds();
-    if (h < 10) { // coloca um zero antes dos números abaixo de dez: ex: 1:1:1 -> 01:01:01
-        h = `0${h}`;
-    }
-    if (m < 10) {
-        m = `0${m}`;
-    }
-    if (s < 10) {
-        s = `0${s}`;
-    }
-    // Mostra a hora, minutos e segundos na página ////////////////////////////////////////////
-    rel.innerHTML = `${h}:${m}:${s}`;
-});
-
-// horário de Fernando de Noronha ///////////////////////////////////////////////////////////////
-setInterval(function relog2() {
-    let rel = document.getElementById('relogio2');
-    let data = new Date();
-    data.setSeconds(data.getSeconds() + 0);
-    data.setHours(data.getHours() + 1);
-    let h = data.getHours();
-    let m = data.getMinutes();
-    let s = data.getSeconds();
-    if (h < 10) {
-        h = `0${h}`;
-    }
-    if (m < 10) {
-        m = `0${m}`;
-    }
-    if (s < 10) {
-        s = `0${s}`;
-    }
-    rel.innerHTML = `${h}:${m}:${s}`;
-});
-
-// horário do Amazonas /////////////////////////////////////////////////////////////////////////
-setInterval(function relog3() {
-    let rel = document.getElementById('relogio3');
-    let data = new Date();
-    data.setSeconds(data.getSeconds() + 0);
-    data.setHours(data.getHours() - 1);
-    let h = data.getHours();
-    let m = data.getMinutes();
-    let s = data.getSeconds();
-    if (h < 10) {
-        h = `0${h}`;
-    }
-    if (m < 10) {
-        m = `0${m}`;
-    }
-    if (s < 10) {
-        s = `0${s}`;
-    }
-    rel.innerHTML = `${h}:${m}:${s}`; // Mostra a hora, minutos e segundos na página
-});
-
-// horário do Acre /////////////////////////////////////////////////////////////////////////////
-setInterval(function relog4() {
-    let rel = document.getElementById('relogio4');
-    let data = new Date();
-    data.setSeconds(data.getSeconds() + 0);
-    data.setHours(data.getHours() - 2);
-    let h = data.getHours();
-    let m = data.getMinutes();
-    let s = data.getSeconds();
-    if (h < 10) {
-        h = `0${h}`;
-    }
-    if (m < 10) {
-        m = `0${m}`;
-    }
-    if (s < 10) {
-        s = `0${s}`;
-    }
-    rel.innerHTML = `${h}:${m}:${s}`; // Mostra a hora, minutos e segundos na página
-});
-
-// Dia, mês e ano //////////////////////////////////////////////////////////////////////////////
-
-// Função para exibir a data atualizada
-function exibirDataAtualizada() {
-    let meses = [
-        "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
-        "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
-    ];
-    let semanas = [
-        "Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira",
-        "Quinta-Feira", "Sexta-Feira", "Sábado"
-    ];
-
-    let data = new Date();
-    let diasem = data.getDay();
-    let dia = data.getDate();
-    let mes = data.getMonth();
-    let ano = data.getFullYear();
-
-    document.getElementById("date").innerHTML =
-        semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano;
+// Função para formatar a hora considerando o fuso horário exato
+function obterHoraFormatada(timeZone) {
+    const agora = new Date();
+    const opcoes = {
+        timeZone: timeZone,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+    };
+    return new Intl.DateTimeFormat('pt-BR', opcoes).format(agora);
 }
 
-// Função para atualizar a data a cada segundo
+// Atualiza todos os relógios na tela
+function atualizarRelogios() {
+    // Horário de Brasília (Oficial)
+    document.getElementById('relogio01').textContent = obterHoraFormatada('America/Sao_Paulo');
+
+    // Fernando de Noronha (UTC-2)
+    document.getElementById('relogio2').textContent = obterHoraFormatada('America/Noronha');
+
+    // Amazonas (UTC-4)
+    document.getElementById('relogio3').textContent = obterHoraFormatada('America/Manaus');
+
+    // Acre (UTC-5)
+    document.getElementById('relogio4').textContent = obterHoraFormatada('America/Rio_Branco');
+}
+
+// Exibe a data no formato nativo estendido
 function atualizarData() {
-    let data = new Date();
-    let horas = data.getHours();
-    let minutos = data.getMinutes();
-    let segundos = data.getSeconds();
-
-    // Verifica se é meia-noite (00:00:00) para trocar o dia exibido
-    if (horas === 0 && minutos === 0 && segundos === 0) {
-        exibirDataAtualizada();
-    }
-
-    setTimeout(atualizarData, 1000); // Chama a função novamente após 1 segundo
+    const agora = new Date();
+    const opcoes = { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric',
+        timeZone: 'America/Sao_Paulo'
+    };
+    
+    let dataTexto = new Intl.DateTimeFormat('pt-BR', opcoes).format(agora);
+    // Capitaliza a primeira letra do dia da semana
+    dataTexto = dataTexto.charAt(0).toUpperCase() + dataTexto.slice(1);
+    
+    document.getElementById('date').textContent = dataTexto;
 }
 
-// Chama a função para exibir a data assim que a página carrega
-exibirDataAtualizada();
+// Inicialização
+function iniciar() {
+    atualizarData();
+    atualizarRelogios();
+    
+    // Atualiza exatamente a cada 1 segundo (1000ms) para alta performance
+    setInterval(atualizarRelogios, 1000);
+    
+    // Atualiza a data a cada 1 minuto para garantir a virada do dia
+    setInterval(atualizarData, 60000);
+}
 
-// Atualiza a data a cada segundo (troca automaticamente à meia-noite)
-atualizarData();
+document.addEventListener('DOMContentLoaded', iniciar);
