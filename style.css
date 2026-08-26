@@ -115,7 +115,7 @@ section {
 }
 section {
     text-align: center;
-    padding-top: 125px; /* Ou outro valor adequado */
+    padding-top: 50px; /* Ou outro valor adequado */
     font-size: 4.8rem;
     color: #0044ff;
     font-family: 'arial';
@@ -123,7 +123,7 @@ section {
 
 p.sr {
     position: fixed;
-    top: 65%;
+    top: 95%;
     right: 43.8%;
     justify-content: space-around;
     font-size: 1.6rem;
@@ -132,7 +132,7 @@ p.sr {
 }
 a.sr {
     position: fixed;
-    top: 65%;
+    top: 95%;
     right: 43.8%;
     justify-content: space-around;
     font-size: 1.6rem;
