@@ -18,14 +18,14 @@ body {
 .container {
     width: 100vw;
     height: 100vh;
-    padding: 2vh 2vw;
+    padding: 3vh 2vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
-/* --- SEÇÃO PRINCIPAL (BRASÍLIA + DATA) --- */
+/* --- SEÇÃO PRINCIPAL (BRASÍLIA -> RELÓGIO -> DATA) --- */
 .header-main {
     text-align: center;
     display: flex;
@@ -35,40 +35,42 @@ body {
 }
 
 h1 {
-    font-size: clamp(1.8rem, 3vw, 4rem);
+    font-size: clamp(1.8rem, 3.2vw, 4.2rem);
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-.date-display {
-    font-size: clamp(1.5rem, 2.5vw, 3.5rem);
-    margin-top: 0.5rem;
-}
-
 .clock-main {
-    font-size: clamp(6rem, 18vw, 26rem);
+    font-size: clamp(6rem, 18vw, 24rem);
     font-weight: bold;
-    line-height: 1;
+    line-height: 0.95;
     margin: 1vh 0;
 }
 
-/* --- GRID DOS FUSOS HORÁRIOS --- */
+.date-display {
+    font-size: clamp(1.8rem, 3.8vw, 5rem);
+    font-weight: normal;
+    margin-top: 0.5rem;
+}
+
+/* --- GRID DOS FUSOS HORÁRIOS SECUNDÁRIOS --- */
 .clocks-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
-    max-width: 3600px; /* Garante expansão total em monitores 4K */
+    max-width: 3600px;
     gap: 2vw;
     text-align: center;
+    margin-top: 2vh;
 }
 
 .clock-card h2 {
-    font-size: clamp(1.1rem, 1.8vw, 2.5rem);
-    margin-bottom: 0.5rem;
+    font-size: clamp(1rem, 1.6vw, 2.2rem);
+    margin-bottom: 0.3rem;
 }
 
 .clock-sub {
-    font-size: clamp(2.5rem, 5vw, 8rem);
+    font-size: clamp(2.5rem, 5.5vw, 8rem);
     font-weight: bold;
 }
 
@@ -86,12 +88,4 @@ h1 {
 
 .footer a:hover {
     text-decoration: underline;
-}
-
-/* --- MEDIA QUERY ESPECÍFICA PARA MONITORES 4K ULTRA HD --- */
-@media (min-width: 2560px) {
-    body {
-        /* Aumenta nitidez e ajuste fino em displays Retina/4K */
-        -webkit-font-smoothing: antialiased;
-    }
 }
