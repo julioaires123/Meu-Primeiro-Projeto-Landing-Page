@@ -2,43 +2,45 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="style.css">
-    <title>CANAL Sr. VAQUINHA</title>
+    <title>CANAL Sr. VAQUINHA - Relógio Multifuso</title>
 </head>
 <body>
-    <h1>HORÁRIO DE BRASÍLIA</h1>
+    <main class="container">
+        <!-- Cabeçalho e Relógio Principal -->
+        <header class="header-main">
+            <h1>HORÁRIO DE BRASÍLIA</h1>
+            <p id="date" class="date-display"></p>
+            <p id="relogio01" class="clock-main"></p>
+        </header>
 
-    <div>
-        <section>
-            <p id="relogio01"></p>
+        <!-- Grid com os Fusos Secundários -->
+        <section class="clocks-grid">
+            <div class="clock-card">
+                <h2>FERNANDO DE NORONHA</h2>
+                <div id="relogio2" class="clock-sub">--:--:--</div>
+            </div>
+
+            <div class="clock-card">
+                <h2>AMAZONAS</h2>
+                <div id="relogio3" class="clock-sub">--:--:--</div>
+            </div>
+
+            <div class="clock-card">
+                <h2>ACRE</h2>
+                <div id="relogio4" class="clock-sub">--:--:--</div>
+            </div>
         </section>
 
-        <section>
-            <p id="date"></p>
-        </section>
-
-        <section>
-            <p class="fn">FERNANDO DE NORONHA</p>
-            <div id="relogio2"></div>
-        </section>
-
-        <section>
-            <p class="am">AMAZONAS</p>
-            <div id="relogio3"></div>
-        </section>
-
-        <section>
-            <p class="ac">ACRE</p>
-            <div id="relogio4"></div>
-        </section>
-
-        <section>
-            <p class="sr">Canal Sr. Vaquinha By: Júlio Aires - <a href="https://www.youtube.com/channel/UC3ACLDxuy75577-GDItIgNA">₢ Canal Sr. Vaquinha</a></p>
-        </section>
-    </div>
+        <!-- Rodapé / Créditos -->
+        <footer class="footer">
+            <p class="sr">
+                Canal Sr. Vaquinha By: Júlio Aires - 
+                <a href="https://www.youtube.com/channel/UC3ACLDxuy75577-GDItIgNA" target="_blank" rel="noopener noreferrer">₢ Canal Sr. Vaquinha</a>
+            </p>
+        </footer>
+    </main>
 
     <script src="script.js"></script>
 </body>
