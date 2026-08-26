@@ -97,7 +97,7 @@ p.ac {
 /* dia, mês e ano — regra única, controlada por position: fixed */
 #date {
     position: fixed;
-    top: 30%; /* diminua para subir, aumente para descer */
+    top: 1%; /* diminua para subir, aumente para descer */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
